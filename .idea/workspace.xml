@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98bdb2cb-bd45-432e-bffa-a4ee9b4e6b20" name="Default" comment="">
+    <list default="true" id="98bdb2cb-bd45-432e-bffa-a4ee9b4e6b20" name="Default" comment="Bandymas pritaikyti strategijos paterną 3/3&#10;Pritakytas strategijos paternas per ciklą, ištrintas senas kodas.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Grid.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Grid.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="Grid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MineSweeper/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="251" column="0" lean-forward="true" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#10648#10649#0" expanded="true" />
@@ -354,7 +353,7 @@
       <workItem from="1509305714928" duration="6224000" />
       <workItem from="1512591717375" duration="2000" />
       <workItem from="1512841565537" duration="577000" />
-      <workItem from="1512844073955" duration="6060000" />
+      <workItem from="1512844073955" duration="6838000" />
     </task>
     <task id="LOCAL-00001" summary="Redagavimo bandymas">
       <created>1512845914957</created>
@@ -391,11 +390,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512852650995</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Bandymas pritaikyti strategijos paterną 3/3&#10;Pritakytas strategijos paternas per ciklą, ištrintas senas kodas.">
+      <created>1512853301487</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1512853301487</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38950000" />
+    <option name="totallyTimeSpent" value="39728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -442,7 +448,8 @@
     <MESSAGE value="Bandymas pritaikyti strategijos paterną" />
     <MESSAGE value="Bandymas pritaikyti strategijos paterną 1/3" />
     <MESSAGE value="Bandymas pritaikyti strategijos paterną 2/3&#10;pakeistas senas kodas, jo valdymas dabar vykdomas per strategijos paterną." />
-    <option name="LAST_COMMIT_MESSAGE" value="Bandymas pritaikyti strategijos paterną 2/3&#10;pakeistas senas kodas, jo valdymas dabar vykdomas per strategijos paterną." />
+    <MESSAGE value="Bandymas pritaikyti strategijos paterną 3/3&#10;Pritakytas strategijos paternas per ciklą, ištrintas senas kodas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bandymas pritaikyti strategijos paterną 3/3&#10;Pritakytas strategijos paternas per ciklą, ištrintas senas kodas." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -719,8 +726,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MineSweeper/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="251" column="0" lean-forward="true" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#10648#10649#0" expanded="true" />
