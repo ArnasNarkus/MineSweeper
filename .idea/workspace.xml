@@ -18,46 +18,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Grid.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Grid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MineSweeper/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="101" column="60" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="101" selection-end-column="60" />
+            <state relative-caret-position="408">
+              <caret line="131" column="13" lean-forward="true" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#12329#12330#0" expanded="true" />
-                <element signature="e#12360#12361#0" expanded="true" />
-                <marker date="1512851500832" expanded="true" signature="1860:1866" ph="{...}" />
+                <element signature="e#12852#12853#0" expanded="true" />
+                <element signature="e#12883#12884#0" expanded="true" />
+                <marker date="1512852542599" expanded="true" signature="1730:1736" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchAndChangeLeftCell.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchAndChangeBottomRightCell.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomRightCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchAndChangeLeftCell.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeLeftCell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchAndChangeBottomCell.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomCell.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchAndChangeTopCell.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopCell.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="28" column="2" lean-forward="false" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+            <state relative-caret-position="255">
+              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -66,8 +56,38 @@
       <file leaf-file-name="SearchAndChangeBottomLeftCell.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomLeftCell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchAndChangeTopRightCell.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopRightCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchAndChangeTopCell.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchAndChangeTopLeftCell.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopLeftCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,15 +136,15 @@
         <option value="$PROJECT_DIR$/src/MineSweeper/Player.java" />
         <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/ISearchAndChangeStrategy.java" />
         <option value="$PROJECT_DIR$/src/MineSweeper/Main.java" />
+        <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomCell.java" />
+        <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopCell.java" />
+        <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeLeftCell.java" />
         <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeRightCell.java" />
         <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopLeftCell.java" />
         <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopRightCell.java" />
         <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomLeftCell.java" />
         <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomRightCell.java" />
-        <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomCell.java" />
-        <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopCell.java" />
         <option value="$PROJECT_DIR$/src/MineSweeper/Grid.java" />
-        <option value="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeLeftCell.java" />
       </list>
     </option>
   </component>
@@ -334,7 +354,7 @@
       <workItem from="1509305714928" duration="6224000" />
       <workItem from="1512591717375" duration="2000" />
       <workItem from="1512841565537" duration="577000" />
-      <workItem from="1512844073955" duration="4470000" />
+      <workItem from="1512844073955" duration="5366000" />
     </task>
     <task id="LOCAL-00001" summary="Redagavimo bandymas">
       <created>1512845914957</created>
@@ -357,15 +377,21 @@
       <option name="project" value="LOCAL" />
       <updated>1512848009637</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Bandymas pritaikyti strategijos paterną 1/3">
+      <created>1512851677034</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1512851677034</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37360000" />
+    <option name="totallyTimeSpent" value="38256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -375,7 +401,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24739583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2140625" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -406,7 +432,8 @@
     <MESSAGE value="Redagavimo bandymas" />
     <MESSAGE value="Komentarų ištrinimas, formatavimas, klasių pervadinimas" />
     <MESSAGE value="Bandymas pritaikyti strategijos paterną" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bandymas pritaikyti strategijos paterną" />
+    <MESSAGE value="Bandymas pritaikyti strategijos paterną 1/3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bandymas pritaikyti strategijos paterną 1/3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -429,9 +456,9 @@
           <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#12329#12330#0" expanded="true" />
-            <element signature="e#12360#12361#0" expanded="true" />
-            <marker date="1512851500832" expanded="true" signature="1860:1866" ph="{...}" />
+            <element signature="e#12852#12853#0" expanded="true" />
+            <element signature="e#12883#12884#0" expanded="true" />
+            <marker date="1512852542599" expanded="true" signature="1730:1736" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -458,9 +485,9 @@
           <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#12329#12330#0" expanded="true" />
-            <element signature="e#12360#12361#0" expanded="true" />
-            <marker date="1512851500832" expanded="true" signature="1860:1866" ph="{...}" />
+            <element signature="e#12852#12853#0" expanded="true" />
+            <element signature="e#12883#12884#0" expanded="true" />
+            <marker date="1512852542599" expanded="true" signature="1730:1736" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -487,9 +514,9 @@
           <caret line="157" column="48" lean-forward="false" selection-start-line="157" selection-start-column="48" selection-end-line="157" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#12329#12330#0" expanded="true" />
-            <element signature="e#12360#12361#0" expanded="true" />
-            <marker date="1512851500832" expanded="true" signature="1860:1866" ph="{...}" />
+            <element signature="e#12852#12853#0" expanded="true" />
+            <element signature="e#12883#12884#0" expanded="true" />
+            <marker date="1512852542599" expanded="true" signature="1730:1736" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -508,9 +535,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#12329#12330#0" expanded="true" />
-            <element signature="e#12360#12361#0" expanded="true" />
-            <marker date="1512851500832" expanded="true" signature="1860:1866" ph="{...}" />
+            <element signature="e#12852#12853#0" expanded="true" />
+            <element signature="e#12883#12884#0" expanded="true" />
+            <marker date="1512852542599" expanded="true" signature="1730:1736" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -545,9 +572,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#12329#12330#0" expanded="true" />
-            <element signature="e#12360#12361#0" expanded="true" />
-            <marker date="1512851500832" expanded="true" signature="1860:1866" ph="{...}" />
+            <element signature="e#12852#12853#0" expanded="true" />
+            <element signature="e#12883#12884#0" expanded="true" />
+            <marker date="1512852542599" expanded="true" signature="1730:1736" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -609,72 +636,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomRightCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopRightCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopLeftCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/ISearchAndChangeStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeRightCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="2" lean-forward="false" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomLeftCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Grid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="101" column="60" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="101" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12329#12330#0" expanded="true" />
-            <element signature="e#12360#12361#0" expanded="true" />
-            <marker date="1512851500832" expanded="true" signature="1860:1866" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -686,11 +652,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeLeftCell.java">
+    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeRightCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopLeftCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopRightCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomLeftCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeLeftCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomRightCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MineSweeper/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="131" column="13" lean-forward="true" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12852#12853#0" expanded="true" />
+            <element signature="e#12883#12884#0" expanded="true" />
+            <marker date="1512852542599" expanded="true" signature="1730:1736" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
