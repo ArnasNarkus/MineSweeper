@@ -14,7 +14,6 @@ public class Grid {
     private static final char mineUnit = '*';
 
 
-
     private List<ISearchAndChangeStrategy> searchAndChangeStrategies = new ArrayList<>();
     private int xLen;
     private int yLen;
@@ -30,11 +29,18 @@ public class Grid {
         this.mineCount = mineCount;
         this.frontGrid = new char[xLen][yLen];
         this.backGrid = new int[xLen][yLen];
-        createGrid();
+
 
         this.searchAndChangeStrategies.add(new SearchAndChangeTopCell(this));
+        this.searchAndChangeStrategies.add(new SearchAndChangeBottomCell(this));
+        this.searchAndChangeStrategies.add(new SearchAndChangeLeftCell(this));
+        this.searchAndChangeStrategies.add(new SearchAndChangeRightCell(this));
+        this.searchAndChangeStrategies.add(new SearchAndChangeTopLeftCell(this));
+        this.searchAndChangeStrategies.add(new SearchAndChangeTopRightCell(this));
+        this.searchAndChangeStrategies.add(new SearchAndChangeBottomLeftCell(this));
+        this.searchAndChangeStrategies.add(new SearchAndChangeBottomRightCell(this));
 
-
+        createGrid();
     }
 
     private void createGrid() {
@@ -70,73 +76,18 @@ public class Grid {
 
         int dangerIndex = 0;
 
+        for (int x = 0; x < this.backGrid.length; x++) {
+            for (int y = 0; y < this.backGrid[x].length; y++) {
 
+                if (this.backGrid[x][y] != -1) { // Do i stand on the mine ?
 
+                    for (ISearchAndChangeStrategy strategy : searchAndChangeStrategies) {
+                        if (strategy.searchAndChange(x, y)) {
+                            dangerIndex++;
+                        }
+                    }
 
-
-
-        for (int i = 0; i < this.backGrid.length; i++) {
-            for (int j = 0; j < this.backGrid[i].length; j++) {
-
-                if (this.backGrid[i][j] != -1) { // Do i stand on the mine ?
-
-
-                   if( new SearchAndChangeTopCell(this).searchAndChange(i,j) )  dangerIndex++;
-
-
-//                    if (((i - 1) >= 0) && ((i - 1) < this.backGrid[i].length))
-//                        if ((this.backGrid[i - 1][j] == -1))
-//                            dangerIndex++;  // Is there a mine above me ?
-
-
-                    if( new SearchAndChangeBottomCell(this).searchAndChange(i,j) )  dangerIndex++;
-
-
-//                    if (((i + 1) >= 0) && ((i + 1) < this.backGrid[i].length))
-//                        if ((this.backGrid[i + 1][j] == -1))
-//                            dangerIndex++; // Is there a mine bellow me ?
-
-                    if( new SearchAndChangeLeftCell(this).searchAndChange(i,j) )  dangerIndex++;
-
-//                    if (((j - 1) >= 0) && ((j - 1) < this.backGrid[i].length))
-//                        if ((this.backGrid[i][j - 1] == -1))
-//                            dangerIndex++; // Is there a mine to the left of me ?
-
-
-                    if( new SearchAndChangeRightCell(this).searchAndChange(i,j) )  dangerIndex++;
-
-//                    if (((j + 1) >= 0) && ((j + 1) < this.backGrid[i].length))
-//                        if ((this.backGrid[i][j + 1] == -1))
-//                            dangerIndex++; // Is there a mine to rhe right of me ?
-
-                    if( new SearchAndChangeTopLeftCell(this).searchAndChange(i,j) )  dangerIndex++;
-
-//                    if (((i - 1) >= 0) && ((i - 1) < this.backGrid[i].length))
-//                        if (((j - 1) >= 0) && ((j - 1) < this.backGrid[i].length))
-//                            if ((this.backGrid[i - 1][j - 1] == -1))
-//                                dangerIndex++; // Is there a mine upper left corner ?
-
-                    if( new SearchAndChangeTopRightCell(this).searchAndChange(i,j) )  dangerIndex++;
-
-//                    if (((i - 1) >= 0) && ((i - 1) < this.backGrid[i].length))
-//                        if (((j + 1) >= 0) && ((j + 1) < this.backGrid[i].length))
-//                            if ((this.backGrid[i - 1][j + 1] == -1))
-//                                dangerIndex++; // Is there a mine upper right corner ?
-
-                    if( new SearchAndChangeBottomLeftCell(this).searchAndChange(i,j) )  dangerIndex++;
-//                    if (((i + 1) >= 0) && ((i + 1) < this.backGrid[i].length))
-//                        if (((j - 1) >= 0) && ((j - 1) < this.backGrid[i].length))
-//                            if ((this.backGrid[i + 1][j - 1] == -1))
-//                                dangerIndex++; // Is there a mine bottom left corner ?
-
-                    if( new SearchAndChangeBottomRightCell(this).searchAndChange(i,j) )  dangerIndex++;
-
-//                    if (((i + 1) >= 0) && ((i + 1) < this.backGrid[i].length))
-//                        if (((j + 1) >= 0) && ((j + 1) < this.backGrid[i].length))
-//                            if ((this.backGrid[i + 1][j + 1] == -1))
-//                                dangerIndex++; // Is there a mine bottom right corner ?
-
-                    this.backGrid[i][j] = dangerIndex;
+                    this.backGrid[x][y] = dangerIndex;
                     dangerIndex = 0;
                 }
             }
