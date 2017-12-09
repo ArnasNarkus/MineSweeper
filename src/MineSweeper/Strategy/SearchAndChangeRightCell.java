@@ -23,8 +23,13 @@ public class SearchAndChangeRightCell implements ISearchAndChangeStrategy {
     }
 
     @Override
-    public boolean searchAndChange(int x, int y, char change) {
-        return false;
+    public void searchAndChange(int x, int y, char searchBy) {
+
+
+        if (((y + 1) < this.grid.getBackGrid()[x].length) && (grid.getFrontGrid()[x][y + 1] != searchBy))
+            grid.getFrontGrid()[x][y + 1] = (char) (grid.getBackGrid()[x][y + 1] + '0'); // reveal right num
+
+
     }
 
 

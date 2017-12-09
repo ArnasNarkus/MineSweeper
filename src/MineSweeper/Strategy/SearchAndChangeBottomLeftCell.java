@@ -23,8 +23,14 @@ public class SearchAndChangeBottomLeftCell implements ISearchAndChangeStrategy {
     }
 
     @Override
-    public boolean searchAndChange(int x, int y, char change) {
-        return false;
+    public void searchAndChange(int x, int y, char searchBy) {
+
+
+        if (((x + 1) < this.grid.getBackGrid()[x].length) && ((y - 1) >= 0) && (grid.getFrontGrid()[x + 1][y - 1] != searchBy))
+            grid.getFrontGrid()[x + 1][y - 1] = (char) (grid.getBackGrid()[x + 1][y - 1] + '0'); // reveal bottom left corner num
+
+
+
     }
 
 

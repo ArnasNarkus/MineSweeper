@@ -25,8 +25,12 @@ public class SearchAndChangeTopRightCell implements ISearchAndChangeStrategy {
 
 
     @Override
-    public boolean searchAndChange(int x, int y, char change) {
-        return false;
+    public void searchAndChange(int x, int y, char searchBy) {
+
+
+        if (x > 0 && (grid.getFrontGrid()[x - 1][y] != searchBy))
+            grid.getFrontGrid()[x - 1][y] = (char) (grid.getBackGrid()[x - 1][y] + '0'); // reveal upper num
+
     }
 
 

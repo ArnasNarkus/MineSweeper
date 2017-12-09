@@ -168,57 +168,24 @@ public class Grid {
 
 
     private void revealNumbers() {
-        System.out.println("revealing");
+
         for (int i = 0; i < this.frontGrid.length; i++) {
             for (int j = 0; j < this.frontGrid[i].length; j++) {
 
                 if (frontGrid[i][j] == reveledUnit) {
 
-                    if (i > 0 && (frontGrid[i - 1][j] != reveledUnit))
-                        frontGrid[i - 1][j] = (char) (backGrid[i - 1][j] + '0'); // reveal upper num
-
-
-                    if (((i + 1) < frontGrid[i].length) && (frontGrid[i + 1][j] != reveledUnit))
-                        frontGrid[i + 1][j] = (char) (backGrid[i + 1][j] + '0'); // reveal bottom num
-
-
-                    if (((j - 1) > 0) && (frontGrid[i][j - 1] != reveledUnit))
-                        frontGrid[i][j - 1] = (char) (backGrid[i][j - 1] + '0'); // reveal left num
-
-
-                    if (((j + 1) < this.backGrid[i].length) && (frontGrid[i][j + 1] != reveledUnit))
-                        frontGrid[i][j + 1] = (char) (backGrid[i][j + 1] + '0'); // reveal right num
-
-
-                    if (((i - 1) > 0) && ((j - 1) >= 0) && (frontGrid[i - 1][j - 1] != reveledUnit))
-                        frontGrid[i - 1][j - 1] = (char) (backGrid[i - 1][j - 1] + '0'); // reveal upper left corner num
-
-
-                    if (((i - 1) > 0) && ((j + 1) < this.backGrid[i].length) && (frontGrid[i - 1][j + 1] != reveledUnit))
-                        frontGrid[i - 1][j + 1] = (char) (backGrid[i - 1][j + 1] + '0'); // reveal upper right corner num
-
-
-                    if (((i + 1) < this.backGrid[i].length) && ((j - 1) >= 0) && (frontGrid[i + 1][j - 1] != reveledUnit))
-                        frontGrid[i + 1][j - 1] = (char) (backGrid[i + 1][j - 1] + '0'); // reveal bottom left corner num
-
-
-                    if (((i + 1) < this.backGrid[i].length) && ((j + 1) < this.backGrid[i].length) && (frontGrid[i + 1][j + 1] != reveledUnit))
-                        frontGrid[i + 1][j + 1] = (char) (backGrid[i + 1][j + 1] + '0'); // reveal  bottom right corner num
-
-
+                    for (ISearchAndChangeStrategy strategy : searchAndChangeStrategies) {
+                        strategy.searchAndChange(i, j, reveledUnit);
+                    }
                 }
-
-
             }
-
-
         }
     }
 
 
     private void cascadeReveal(int i, int j) {
 
-        //    System.out.println(i+" "+ j);
+
 
         LinkedList<Coordinates> moreReveal = new LinkedList<Coordinates>();
         Coordinates temp;
@@ -315,5 +282,9 @@ public class Grid {
 
     public int[][] getBackGrid() {
         return backGrid;
+    }
+
+    public char[][] getFrontGrid() {
+        return frontGrid;
     }
 }

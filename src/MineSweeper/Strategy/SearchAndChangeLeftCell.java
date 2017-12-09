@@ -23,8 +23,12 @@ public class SearchAndChangeLeftCell implements ISearchAndChangeStrategy {
     }
 
     @Override
-    public boolean searchAndChange(int x, int y, char change) {
-        return false;
+    public void searchAndChange(int x, int y, char searchBy) {
+
+        if (((y - 1) > 0) && (grid.getFrontGrid()[x][y - 1] != searchBy))
+            grid.getFrontGrid()[x][y - 1] = (char) (grid.getBackGrid()[x][y - 1] + '0'); // reveal left num
+
+
     }
 
 
