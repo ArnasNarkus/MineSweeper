@@ -19,28 +19,10 @@ while (!grid.isGameOver()) {
     grid.renderGrid(player.getPointer());
 
 
- //   grid.printBackGrid();
-    // check if game over
-
 }
 
 
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
 
 
 }
