@@ -1,8 +1,12 @@
 package MineSweeper;
 
+import MineSweeper.Strategy.ISearchAndChangeStrategy;
+import MineSweeper.Strategy.SearchAndChangeBottomCell;
 import MineSweeper.Strategy.SearchAndChangeTopCell;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Grid {
 
@@ -13,7 +17,7 @@ public class Grid {
 
 
 
-
+    private List<ISearchAndChangeStrategy> searchAndChangeStrategies = new ArrayList<>();
     private int xLen;
     private int yLen;
     private int mineCount;
@@ -29,6 +33,10 @@ public class Grid {
         this.frontGrid = new char[xLen][yLen];
         this.backGrid = new int[xLen][yLen];
         createGrid();
+
+        this.searchAndChangeStrategies.add(new SearchAndChangeTopCell(this));
+
+
     }
 
     private void createGrid() {
@@ -64,6 +72,11 @@ public class Grid {
 
         int dangerIndex = 0;
 
+
+
+
+
+
         for (int i = 0; i < this.backGrid.length; i++) {
             for (int j = 0; j < this.backGrid[i].length; j++) {
 
@@ -71,19 +84,19 @@ public class Grid {
 
 
                    if( new SearchAndChangeTopCell(this).searchAndChange(i,j) )  dangerIndex++;
-                    
+
 
 //                    if (((i - 1) >= 0) && ((i - 1) < this.backGrid[i].length))
 //                        if ((this.backGrid[i - 1][j] == -1))
 //                            dangerIndex++;  // Is there a mine above me ?
 
 
+                    if( new SearchAndChangeBottomCell(this).searchAndChange(i,j) )  dangerIndex++;
 
 
-
-                    if (((i + 1) >= 0) && ((i + 1) < this.backGrid[i].length))
-                        if ((this.backGrid[i + 1][j] == -1))
-                            dangerIndex++; // Is there a mine bellow me ?
+//                    if (((i + 1) >= 0) && ((i + 1) < this.backGrid[i].length))
+//                        if ((this.backGrid[i + 1][j] == -1))
+//                            dangerIndex++; // Is there a mine bellow me ?
 
                     if (((j - 1) >= 0) && ((j - 1) < this.backGrid[i].length))
                         if ((this.backGrid[i][j - 1] == -1))
