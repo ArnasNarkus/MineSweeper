@@ -1,3 +1,5 @@
+package MineSweeper;
+
 public class Coordinates {
 
  private    int posX=0;

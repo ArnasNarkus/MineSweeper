@@ -1,3 +1,7 @@
+package MineSweeper;
+
+import MineSweeper.Strategy.SearchAndChangeTopCell;
+
 import java.util.LinkedList;
 
 public class Grid {
@@ -6,6 +10,8 @@ public class Grid {
     private static final char reveledUnit = '_';
     private static final char hiddenUnit = '+';
     private static final char mineUnit = '*';
+
+
 
 
     private int xLen;
@@ -63,9 +69,17 @@ public class Grid {
 
                 if (this.backGrid[i][j] != -1) { // Do i stand on the mine ?
 
-                    if (((i - 1) >= 0) && ((i - 1) < this.backGrid[i].length))
-                        if ((this.backGrid[i - 1][j] == -1))
-                            dangerIndex++;  // Is there a mine above me ?
+
+                   if( new SearchAndChangeTopCell(this).searchAndChange(i,j) )  dangerIndex++;
+                    
+
+//                    if (((i - 1) >= 0) && ((i - 1) < this.backGrid[i].length))
+//                        if ((this.backGrid[i - 1][j] == -1))
+//                            dangerIndex++;  // Is there a mine above me ?
+
+
+
+
 
                     if (((i + 1) >= 0) && ((i + 1) < this.backGrid[i].length))
                         if ((this.backGrid[i + 1][j] == -1))
@@ -325,5 +339,7 @@ public class Grid {
         return mineCount;
     }
 
-
+    public int[][] getBackGrid() {
+        return backGrid;
+    }
 }
