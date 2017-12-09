@@ -21,6 +21,13 @@ public class SearchAndChangeBottomCell implements ISearchAndChangeStrategy {
 
         return false;
     }
+
+    @Override
+    public boolean searchAndChange(int x, int y, char change) {
+        return false;
+    }
+
+
 }
 
 /*

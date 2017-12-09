@@ -19,7 +19,14 @@ public class SearchAndChangeBottomLeftCell implements ISearchAndChangeStrategy {
                 if ((grid.getBackGrid()[x + 1][y - 1] == -1))
                 return true;  // Is there a mine above me ?
 
-
         return false;
     }
+
+    @Override
+    public boolean searchAndChange(int x, int y, char change) {
+        return false;
+    }
+
+
+
 }
