@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-public class player {
+public class Player {
 
     private Coordinates pointer = new Coordinates();
 
-    public player() {
+    public Player() {
     }
 
 
-    public void move(grid grid) {
+    public void move(Grid grid) {
 
         Scanner keyboard = new Scanner(System.in);
         String direction = keyboard.next();

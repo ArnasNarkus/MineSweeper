@@ -1,30 +1,19 @@
 public class Main {
 
 
-
-
     public static void main(String[] args) {
 
-        grid grid = new grid(10,10,10);
-        player player = new player();
+        Grid grid = new Grid(10, 10, 10);
+        Player player = new Player();
 
-
- //a       grid.printBackGrid();
         grid.renderGrid(player.getPointer());
 
-
-while (!grid.isGameOver()) {
-    System.out.println();
-    player.move(grid);
-    grid.renderGrid(player.getPointer());
-
-
-}
-
-
+        while (!grid.isGameOver()) {
+            System.out.println();
+            player.move(grid);
+            grid.renderGrid(player.getPointer());
+        }
     }
-
-
 }
 
 

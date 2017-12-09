@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class grid {
+public class Grid {
 
 
     private static final char reveledUnit = '_';
@@ -16,7 +16,7 @@ public class grid {
     private boolean gameOver = false;
 
 
-    public grid(int xLen, int yLen, int mineCount) {
+    public Grid(int xLen, int yLen, int mineCount) {
         this.xLen = xLen;
         this.yLen = yLen;
         this.mineCount = mineCount;
@@ -173,11 +173,10 @@ public class grid {
     }
 
 
-    void gameOver (){
+    void gameOver() {
         this.gameOver = true;
         this.printBackGrid();
     }
-
 
 
     private void revealNumbers() {
@@ -191,33 +190,32 @@ public class grid {
                         frontGrid[i - 1][j] = (char) (backGrid[i - 1][j] + '0'); // reveal upper num
 
 
-                    if ( ( (i + 1) < frontGrid[i].length) && (frontGrid[i + 1][j] != reveledUnit) )
+                    if (((i + 1) < frontGrid[i].length) && (frontGrid[i + 1][j] != reveledUnit))
                         frontGrid[i + 1][j] = (char) (backGrid[i + 1][j] + '0'); // reveal bottom num
 
 
-                    if ( ( (j - 1) > 0 )   && (frontGrid[i][j-1] != reveledUnit))
-                        frontGrid[i][j-1] = (char) (backGrid[i][j-1] + '0'); // reveal left num
+                    if (((j - 1) > 0) && (frontGrid[i][j - 1] != reveledUnit))
+                        frontGrid[i][j - 1] = (char) (backGrid[i][j - 1] + '0'); // reveal left num
 
 
-                    if (  ((j + 1) < this.backGrid[i].length)  && (frontGrid[i][j+1] != reveledUnit) )
-                        frontGrid[i][j+1] = (char) (backGrid[i][j+1] + '0'); // reveal right num
+                    if (((j + 1) < this.backGrid[i].length) && (frontGrid[i][j + 1] != reveledUnit))
+                        frontGrid[i][j + 1] = (char) (backGrid[i][j + 1] + '0'); // reveal right num
 
 
-                    if (((i - 1) > 0)  && ((j - 1) >= 0)   && (frontGrid[i-1][j-1] != reveledUnit) )
-                    frontGrid[i-1][j-1] = (char) (backGrid[i - 1][j-1] + '0'); // reveal upper left corner num
+                    if (((i - 1) > 0) && ((j - 1) >= 0) && (frontGrid[i - 1][j - 1] != reveledUnit))
+                        frontGrid[i - 1][j - 1] = (char) (backGrid[i - 1][j - 1] + '0'); // reveal upper left corner num
 
 
-
-                    if (((i - 1) >0) && ((j + 1) < this.backGrid[i].length)  && (frontGrid[i-1][j+1] != reveledUnit) )
-                        frontGrid[i-1][j+1] = (char) (backGrid[i - 1][j+1] + '0'); // reveal upper right corner num
-
-
-                     if ( ( (i + 1) < this.backGrid[i].length) &&  ((j - 1) >= 0)  && (frontGrid[i+1][j-1] != reveledUnit))
-                         frontGrid[i+1][j-1] = (char) (backGrid[i + 1][j-1] + '0'); // reveal bottom left corner num
+                    if (((i - 1) > 0) && ((j + 1) < this.backGrid[i].length) && (frontGrid[i - 1][j + 1] != reveledUnit))
+                        frontGrid[i - 1][j + 1] = (char) (backGrid[i - 1][j + 1] + '0'); // reveal upper right corner num
 
 
-                    if (  ((i + 1) < this.backGrid[i].length)  && ((j + 1) < this.backGrid[i].length)  && (frontGrid[i+1][j+1] != reveledUnit)  )
-                        frontGrid[i+1][j+1] = (char) (backGrid[i + 1][j+1] + '0'); // reveal  bottom right corner num
+                    if (((i + 1) < this.backGrid[i].length) && ((j - 1) >= 0) && (frontGrid[i + 1][j - 1] != reveledUnit))
+                        frontGrid[i + 1][j - 1] = (char) (backGrid[i + 1][j - 1] + '0'); // reveal bottom left corner num
+
+
+                    if (((i + 1) < this.backGrid[i].length) && ((j + 1) < this.backGrid[i].length) && (frontGrid[i + 1][j + 1] != reveledUnit))
+                        frontGrid[i + 1][j + 1] = (char) (backGrid[i + 1][j + 1] + '0'); // reveal  bottom right corner num
 
 
                 }
@@ -232,29 +230,30 @@ public class grid {
 
     private void cascadeReveal(int i, int j) {
 
-    //    System.out.println(i+" "+ j);
+        //    System.out.println(i+" "+ j);
 
         LinkedList<Coordinates> moreReveal = new LinkedList<Coordinates>();
         Coordinates temp;
 
 
-        if (  (i - 1) >0 ){
-            if ((this.backGrid[i - 1][j] == 0) && this.frontGrid[i - 1][j] != reveledUnit         ) {
+        if ((i - 1) > 0) {
+            if ((this.backGrid[i - 1][j] == 0) && this.frontGrid[i - 1][j] != reveledUnit) {
                 this.frontGrid[i - 1][j] = reveledUnit;
                 temp = new Coordinates(i - 1, j);
                 moreReveal.add(temp);
-            }}
+            }
+        }
 
-        if ( (i + 1) < this.backGrid[i].length ){
+        if ((i + 1) < this.backGrid[i].length) {
 
-            if ((this.backGrid[i + 1][j] == 0) && (this.frontGrid[i + 1][j] != reveledUnit) ) {
+            if ((this.backGrid[i + 1][j] == 0) && (this.frontGrid[i + 1][j] != reveledUnit)) {
                 this.frontGrid[i + 1][j] = reveledUnit;
                 temp = new Coordinates(i + 1, j);
                 moreReveal.add(temp);
 
 
-
-            }}
+            }
+        }
 
         if (((j - 1) >= 0) && ((j - 1) < this.backGrid[i].length))
             if ((this.backGrid[i][j - 1] == 0) && this.frontGrid[i][j - 1] != reveledUnit) {
