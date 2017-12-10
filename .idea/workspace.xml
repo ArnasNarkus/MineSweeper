@@ -4,15 +4,6 @@
     <list default="true" id="98bdb2cb-bd45-432e-bffa-a4ee9b4e6b20" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Grid.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Grid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Strategy/ISearchAndChangeStrategy.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Strategy/ISearchAndChangeStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomCell.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomLeftCell.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomLeftCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomRightCell.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeBottomRightCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeLeftCell.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeLeftCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeRightCell.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeRightCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopCell.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopLeftCell.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopLeftCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopRightCell.java" afterPath="$PROJECT_DIR$/src/MineSweeper/Strategy/SearchAndChangeTopRightCell.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,14 +21,14 @@
       <file leaf-file-name="Grid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MineSweeper/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+            <state relative-caret-position="397">
+              <caret line="187" column="0" lean-forward="true" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5332#5345#0" expanded="true" />
-                <element signature="e#9376#9377#0" expanded="true" />
-                <element signature="e#9408#9409#0" expanded="true" />
-                <marker date="1512865002803" expanded="true" signature="2305:2311" ph="{...}" />
+                <element signature="e#5357#5370#0" expanded="true" />
+                <element signature="e#6042#6043#0" expanded="true" />
+                <element signature="e#6074#6075#0" expanded="true" />
+                <marker date="1512865222545" expanded="true" signature="2305:2311" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -381,7 +372,7 @@
       <workItem from="1509305714928" duration="6224000" />
       <workItem from="1512591717375" duration="2000" />
       <workItem from="1512841565537" duration="577000" />
-      <workItem from="1512844073955" duration="13860000" />
+      <workItem from="1512844073955" duration="14128000" />
     </task>
     <task id="LOCAL-00001" summary="Redagavimo bandymas">
       <created>1512845914957</created>
@@ -446,11 +437,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512859676567</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Papildytas strategijų paternas, atidengiant minų lauką, flod fill funkcionalumą.">
+      <created>1512865056037</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1512865056037</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46750000" />
+    <option name="totallyTimeSpent" value="47018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -501,7 +499,8 @@
     <MESSAGE value="Bandymas pritaikyti strategijos paterną&#10;Pamiršti pridėti paterno failai." />
     <MESSAGE value="Pridėtas git ignore" />
     <MESSAGE value="Papildytas strategijų funkcionalumas, refakatorint seną kodą. Kai yra turi būt atskliedžiami skaičia." />
-    <option name="LAST_COMMIT_MESSAGE" value="Papildytas strategijų funkcionalumas, refakatorint seną kodą. Kai yra turi būt atskliedžiami skaičia." />
+    <MESSAGE value="Papildytas strategijų paternas, atidengiant minų lauką, flod fill funkcionalumą." />
+    <option name="LAST_COMMIT_MESSAGE" value="Papildytas strategijų paternas, atidengiant minų lauką, flod fill funkcionalumą." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -524,10 +523,10 @@
           <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5332#5345#0" expanded="true" />
-            <element signature="e#9376#9377#0" expanded="true" />
-            <element signature="e#9408#9409#0" expanded="true" />
-            <marker date="1512865002803" expanded="true" signature="2305:2311" ph="{...}" />
+            <element signature="e#5357#5370#0" expanded="true" />
+            <element signature="e#6042#6043#0" expanded="true" />
+            <element signature="e#6074#6075#0" expanded="true" />
+            <marker date="1512865222545" expanded="true" signature="2305:2311" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -554,10 +553,10 @@
           <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5332#5345#0" expanded="true" />
-            <element signature="e#9376#9377#0" expanded="true" />
-            <element signature="e#9408#9409#0" expanded="true" />
-            <marker date="1512865002803" expanded="true" signature="2305:2311" ph="{...}" />
+            <element signature="e#5357#5370#0" expanded="true" />
+            <element signature="e#6042#6043#0" expanded="true" />
+            <element signature="e#6074#6075#0" expanded="true" />
+            <marker date="1512865222545" expanded="true" signature="2305:2311" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -584,10 +583,10 @@
           <caret line="157" column="48" lean-forward="false" selection-start-line="157" selection-start-column="48" selection-end-line="157" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5332#5345#0" expanded="true" />
-            <element signature="e#9376#9377#0" expanded="true" />
-            <element signature="e#9408#9409#0" expanded="true" />
-            <marker date="1512865002803" expanded="true" signature="2305:2311" ph="{...}" />
+            <element signature="e#5357#5370#0" expanded="true" />
+            <element signature="e#6042#6043#0" expanded="true" />
+            <element signature="e#6074#6075#0" expanded="true" />
+            <marker date="1512865222545" expanded="true" signature="2305:2311" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -606,10 +605,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5332#5345#0" expanded="true" />
-            <element signature="e#9376#9377#0" expanded="true" />
-            <element signature="e#9408#9409#0" expanded="true" />
-            <marker date="1512865002803" expanded="true" signature="2305:2311" ph="{...}" />
+            <element signature="e#5357#5370#0" expanded="true" />
+            <element signature="e#6042#6043#0" expanded="true" />
+            <element signature="e#6074#6075#0" expanded="true" />
+            <marker date="1512865222545" expanded="true" signature="2305:2311" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -644,10 +643,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5332#5345#0" expanded="true" />
-            <element signature="e#9376#9377#0" expanded="true" />
-            <element signature="e#9408#9409#0" expanded="true" />
-            <marker date="1512865002803" expanded="true" signature="2305:2311" ph="{...}" />
+            <element signature="e#5357#5370#0" expanded="true" />
+            <element signature="e#6042#6043#0" expanded="true" />
+            <element signature="e#6074#6075#0" expanded="true" />
+            <marker date="1512865222545" expanded="true" signature="2305:2311" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -799,14 +798,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MineSweeper/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+        <state relative-caret-position="397">
+          <caret line="187" column="0" lean-forward="true" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5332#5345#0" expanded="true" />
-            <element signature="e#9376#9377#0" expanded="true" />
-            <element signature="e#9408#9409#0" expanded="true" />
-            <marker date="1512865002803" expanded="true" signature="2305:2311" ph="{...}" />
+            <element signature="e#5357#5370#0" expanded="true" />
+            <element signature="e#6042#6043#0" expanded="true" />
+            <element signature="e#6074#6075#0" expanded="true" />
+            <marker date="1512865222545" expanded="true" signature="2305:2311" ph="{...}" />
           </folding>
         </state>
       </provider>

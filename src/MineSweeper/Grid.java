@@ -149,7 +149,7 @@ public class Grid {
 
             case 0:
                 this.frontGrid[x][y] = reveledUnit;
-                cascadeReveal(pointer.getPosX(), pointer.getPosY());
+                cascadeReveal(new Coordinates(pointer.getPosX(), pointer.getPosY()) );
                 revealNumbers();
                 break;
 
@@ -183,92 +183,20 @@ public class Grid {
     }
 
 
-    private void cascadeReveal(int i, int j) {
-
+    private void cascadeReveal(Coordinates initCord) {
 
 
         LinkedList<Coordinates> moreReveal = new LinkedList<Coordinates>();
         Coordinates temp;
 
         for (ISearchAndChangeStrategy strategy : searchAndChangeStrategies) {
-            moreReveal.add( strategy.floodFillSearchAndChange(i, j, reveledUnit)) ;
+            moreReveal.add( strategy.floodFillSearchAndChange(initCord.getPosX(),initCord.getPosY(), reveledUnit)) ;
         }
 
         for (int k = 0; k < moreReveal.size(); k++) {
         if(moreReveal.get(k) != null)
-            cascadeReveal(moreReveal.get(k).getPosX(), moreReveal.get(k).getPosY());
+            cascadeReveal(moreReveal.get(k));
         }
-
-
-//        if ((i - 1) > 0) {
-//            if ((this.backGrid[i - 1][j] == 0) && this.frontGrid[i - 1][j] != reveledUnit) {
-//                this.frontGrid[i - 1][j] = reveledUnit;
-//                temp = new Coordinates(i - 1, j);
-//                moreReveal.add(temp); // bot
-//            }
-//        }++++++++++
-//
-//        if ((i + 1) < this.backGrid[i].length) {
-//
-//            if ((this.backGrid[i + 1][j] == 0) && (this.frontGrid[i + 1][j] != reveledUnit)) {
-//                this.frontGrid[i + 1][j] = reveledUnit;
-//                temp = new Coordinates(i + 1, j);
-//                moreReveal.add(temp); // top
-//            }
-//        }+++++++++++
-//
-//        if (((j - 1) >= 0) && ((j - 1) < this.backGrid[i].length))
-//            if ((this.backGrid[i][j - 1] == 0) && this.frontGrid[i][j - 1] != reveledUnit) {
-//                this.frontGrid[i][j - 1] = reveledUnit; // Is there a mine to the left of me ?
-//                temp = new Coordinates(i, j - 1);
-//                moreReveal.add(temp);
-//            }
-//
-//        if (((j + 1) >= 0) && ((j + 1) < this.backGrid[i].length))
-//            if ((this.backGrid[i][j + 1] == 0) && this.frontGrid[i][j + 1] != reveledUnit) {
-//                this.frontGrid[i][j + 1] = reveledUnit; // Is there a mine to rhe right of me ?
-//                temp = new Coordinates(i, j + 1);
-//                moreReveal.add(temp);
-//            }
-//
-//
-//        if (((i - 1) >= 0) && ((i - 1) < this.backGrid[i].length))
-//            if (((j - 1) >= 0) && ((j - 1) < this.backGrid[i].length))
-//                if ((this.backGrid[i - 1][j - 1] == 0) && this.frontGrid[i - 1][j - 1] != reveledUnit) {
-//                    this.frontGrid[i - 1][j - 1] = reveledUnit; // Is there a mine upper left corner ?
-//                    temp = new Coordinates(i - 1, j - 1);
-//                    moreReveal.add(temp);
-//                }
-//
-//        if (((i - 1) >= 0) && ((i - 1) < this.backGrid[i].length))
-//            if (((j + 1) >= 0) && ((j + 1) < this.backGrid[i].length))
-//                if ((this.backGrid[i - 1][j + 1] == 0) && this.frontGrid[i - 1][j + 1] != reveledUnit) {
-//                    this.frontGrid[i - 1][j + 1] = reveledUnit; // Is there a mine upper right corner ?
-//                    temp = new Coordinates(i - 1, j + 1);
-//                    moreReveal.add(temp);
-//                }
-//
-//        if (((i + 1) >= 0) && ((i + 1) < this.backGrid[i].length))
-//            if (((j - 1) >= 0) && ((j - 1) < this.backGrid[i].length))
-//                if ((this.backGrid[i + 1][j - 1] == 0) && this.frontGrid[i + 1][j - 1] != reveledUnit) {
-//                    this.frontGrid[i + 1][j - 1] = reveledUnit; // Is there a mine bottom left corner ?
-//                    temp = new Coordinates(i + 1, j - 1);
-//                    moreReveal.add(temp);
-//                }
-//
-//        if (((i + 1) >= 0) && ((i + 1) < this.backGrid[i].length))
-//            if (((j + 1) >= 0) && ((j + 1) < this.backGrid[i].length))
-//                if ((this.backGrid[i + 1][j + 1] == 0) && this.frontGrid[i + 1][j + 1] != reveledUnit) {
-//                    this.frontGrid[i + 1][j + 1] = reveledUnit; // Is there a mine bottom right corner ?
-//                    temp = new Coordinates(i + 1, j + 1);
-//                    moreReveal.add(temp);
-//                }
-
-
-
-
-
-
 
 
     }
