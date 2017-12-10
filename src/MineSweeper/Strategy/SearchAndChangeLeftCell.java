@@ -1,5 +1,6 @@
 package MineSweeper.Strategy;
 
+import MineSweeper.Coordinates;
 import MineSweeper.Grid;
 
 public class SearchAndChangeLeftCell implements ISearchAndChangeStrategy {
@@ -30,6 +31,19 @@ public class SearchAndChangeLeftCell implements ISearchAndChangeStrategy {
 
 
     }
+
+    @Override
+    public Coordinates floodFillSearchAndChange(int x, int y, char searchBy) {
+
+        if (((y - 1) >= 0) && ((y - 1) < grid.getBackGrid()[x].length))
+            if ((grid.getBackGrid()[x][y - 1] == 0) && grid.getFrontGrid()[x][y - 1] != searchBy) {
+                grid.getFrontGrid()[x][y - 1] = searchBy; // Is there a mine to the left of me ?
+               return  new Coordinates(x, y - 1);
+
+            }
+        return null;
+    }
+
 
 
 }

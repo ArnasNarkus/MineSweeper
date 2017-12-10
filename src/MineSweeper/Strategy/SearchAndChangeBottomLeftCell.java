@@ -1,5 +1,6 @@
 package MineSweeper.Strategy;
 
+import MineSweeper.Coordinates;
 import MineSweeper.Grid;
 
 public class SearchAndChangeBottomLeftCell implements ISearchAndChangeStrategy {
@@ -25,14 +26,20 @@ public class SearchAndChangeBottomLeftCell implements ISearchAndChangeStrategy {
     @Override
     public void searchAndChange(int x, int y, char searchBy) {
 
-
         if (((x + 1) < this.grid.getBackGrid()[x].length) && ((y - 1) >= 0) && (grid.getFrontGrid()[x + 1][y - 1] != searchBy))
             grid.getFrontGrid()[x + 1][y - 1] = (char) (grid.getBackGrid()[x + 1][y - 1] + '0'); // reveal bottom left corner num
-
-
-
     }
 
+    @Override
+    public Coordinates floodFillSearchAndChange(int x, int y, char searchBy) {
+                if (((x + 1) >= 0) && ((x + 1) < grid.getBackGrid()[x].length))
+            if (((y - 1) >= 0) && ((y - 1) < grid.getBackGrid()[x].length))
+                if ((grid.getBackGrid()[x + 1][y - 1] == 0) && grid.getFrontGrid()[x + 1][y - 1] != searchBy) {
+                    grid.getFrontGrid()[x + 1][y - 1] = searchBy; // Is there a mine bottom left corner ?
+                   return new Coordinates(x + 1, y - 1);
+                }
+                return null;
+    }
 
 
 }
