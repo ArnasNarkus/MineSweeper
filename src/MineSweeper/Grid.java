@@ -1,17 +1,15 @@
 package MineSweeper;
 
 import MineSweeper.Strategy.*;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Grid {
 
-
-    private static final char reveledUnit = '_';
-    private static final char hiddenUnit = '+';
-    private static final char mineUnit = '*';
+    private static final char REVELED_UNIT = '_';
+    private static final char HIDDEN_UNIT = '+';
+    private static final char MINE_UNIT = '*';
     private static final int MINE_NUM = -1;
     private static final int EMPTY_CELL_NUM = 0;
 
@@ -54,7 +52,7 @@ public class Grid {
     private void createFrontGrid() {
         for (int i = 0; i < this.frontGrid.length; i++) {
             for (int j = 0; j < this.frontGrid[i].length; j++) {
-                this.frontGrid[i][j] = hiddenUnit;
+                this.frontGrid[i][j] = HIDDEN_UNIT;
             }
         }
     }
@@ -144,7 +142,7 @@ public class Grid {
 
             case MINE_NUM:
                 System.out.println("Game over");
-                this.frontGrid[x][y] = mineUnit;
+                this.frontGrid[x][y] = MINE_UNIT;
                 gameOver();
                 break;
 
@@ -172,10 +170,10 @@ public class Grid {
         for (int i = 0; i < this.frontGrid.length; i++) {
             for (int j = 0; j < this.frontGrid[i].length; j++) {
 
-                if (frontGrid[i][j] == reveledUnit) {
+                if (frontGrid[i][j] == REVELED_UNIT) {
 
                     for (ISearchAndChangeStrategy strategy : searchAndChangeStrategies) {
-                        strategy.searchAndChange(i, j, reveledUnit);
+                        strategy.searchAndChange(i, j, REVELED_UNIT);
                     }
                 }
             }
@@ -184,20 +182,15 @@ public class Grid {
 
 
     private void cascadeReveal(Coordinates initCord) {
-
-
-        LinkedList<Coordinates> moreReveal = new LinkedList<>();
-
+        LinkedList<Coordinates> floodFillReveal = new LinkedList<>();
 
         for (ISearchAndChangeStrategy strategy : searchAndChangeStrategies) {
-            moreReveal.add( strategy.floodFillSearchAndChange(initCord.getPosX(),initCord.getPosY(), reveledUnit)) ;
+            floodFillReveal.add( strategy.floodFillSearchAndChange(initCord.getPosX(),initCord.getPosY(), REVELED_UNIT));
         }
 
-        for (int k = 0; k < moreReveal.size(); k++) {
-        if(moreReveal.get(k) != null)
-            cascadeReveal(moreReveal.get(k));
+        for (Coordinates aFloodFillReveal : floodFillReveal) {
+            if (aFloodFillReveal != null) { cascadeReveal(aFloodFillReveal); }
         }
-
     }
 
 
@@ -217,7 +210,5 @@ public class Grid {
         return backGrid;
     }
 
-    public char[][] getFrontGrid() {
-        return frontGrid;
-    }
+    public char[][] getFrontGrid() {return frontGrid; }
 }
