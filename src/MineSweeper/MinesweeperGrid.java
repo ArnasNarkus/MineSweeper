@@ -120,12 +120,13 @@ public class MinesweeperGrid {
         switch (this.backGrid[x][y]) {
 
             case MINE_NUM:
-                System.out.println("Game over");
+                System.out.println("IGame over");
                 this.frontGrid[x][y] = MINE_UNIT;
                 gameOver();
                 break;
 
             case EMPTY_CELL_NUM:
+                this.frontGrid[x][y] = REVELED_UNIT;
                 cascadeReveal(new Coordinates(pointer.getPosX(), pointer.getPosY()) );
                 revealNumbers();
                 break;
