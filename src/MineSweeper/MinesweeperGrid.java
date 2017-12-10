@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Grid {
+public class MinesweeperGrid {
 
     private static final char REVELED_UNIT = '_';
     private static final char HIDDEN_UNIT = '+';
@@ -23,7 +23,7 @@ public class Grid {
     private boolean gameOver = false;
 
 
-    public Grid(int xLen, int yLen, int mineCount) {
+    public MinesweeperGrid(int xLen, int yLen, int mineCount) {
         this.xLen = xLen;
         this.yLen = yLen;
         this.mineCount = mineCount;
@@ -94,28 +94,7 @@ public class Grid {
     }
 
 
-    public void renderGrid(Coordinates pointer) {
 
-
-        System.out.print("X : " + pointer.getPosX());
-        System.out.print(" Y : " + pointer.getPosY());
-        System.out.println();
-
-        for (int i = 0; i < this.frontGrid.length; i++) {
-            for (int j = 0; j < this.frontGrid[i].length; j++) {
-
-
-                if (i == pointer.getPosX() && j == pointer.getPosY()) { // pointer location
-                    System.out.print(String.format(">%1$1s", this.frontGrid[i][j]) + " ");
-                } else {
-                    System.out.print(String.format("%1$2s", this.frontGrid[i][j]) + " ");
-                }
-            }
-            System.out.println();
-        }
-
-
-    }
 
 
     public void printBackGrid() {
@@ -128,13 +107,13 @@ public class Grid {
         }
     }
 
+
+
     public boolean isGameOver() {
         return gameOver;
     }
 
     public void reveal(Coordinates pointer) {
-
-
         int x = pointer.getPosX();
         int y = pointer.getPosY();
 

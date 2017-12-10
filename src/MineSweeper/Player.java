@@ -10,7 +10,7 @@ public class Player {
     }
 
 
-    public void move(Grid grid) {
+    public void move(MinesweeperGrid grid) {
 
         Scanner keyboard = new Scanner(System.in);
         String direction = keyboard.next();

@@ -5,15 +5,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Grid grid = new Grid(10, 10, 10);
+        MinesweeperGrid grid = new MinesweeperGrid(10, 10, 10);
         Player player = new Player();
+        MinesweeperRenderer renderer = new MinesweeperRenderer(grid);
 
-        grid.renderGrid(player.getPointer());
+        renderer.renderGrid(player.getPointer());
 
         while (!grid.isGameOver()) {
             System.out.println();
             player.move(grid);
-            grid.renderGrid(player.getPointer());
+            renderer.renderGrid(player.getPointer());
         }
     }
 }

@@ -1,14 +1,14 @@
 package MineSweeper.Strategy;
 
 import MineSweeper.Coordinates;
-import MineSweeper.Grid;
+import MineSweeper.MinesweeperGrid;
 
 public class SearchAndChangeRightCell implements ISearchAndChangeStrategy {
 
 
-    private Grid grid;
+    private MinesweeperGrid grid;
 
-    public SearchAndChangeRightCell(Grid grid) {
+    public SearchAndChangeRightCell(MinesweeperGrid grid) {
         this.grid = grid;
     }
 
