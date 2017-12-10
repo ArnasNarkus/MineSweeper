@@ -1,6 +1,6 @@
 package MineSweeper;
 
-import MineSweeper.Strategy.*;
+import MineSweeper.strategy.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -94,9 +94,6 @@ public class MinesweeperGrid {
     }
 
 
-
-
-
     public void printBackGrid() {
 
         for (int i = 0; i < this.backGrid.length; i++) {
@@ -106,6 +103,8 @@ public class MinesweeperGrid {
             System.out.println();
         }
     }
+
+
 
 
 
@@ -120,7 +119,7 @@ public class MinesweeperGrid {
         switch (this.backGrid[x][y]) {
 
             case MINE_NUM:
-                System.out.println("IGame over");
+                System.out.println("Game over");
                 this.frontGrid[x][y] = MINE_UNIT;
                 gameOver();
                 break;
