@@ -12,6 +12,8 @@ public class Grid {
     private static final char reveledUnit = '_';
     private static final char hiddenUnit = '+';
     private static final char mineUnit = '*';
+    private static final int MINE_NUM = -1;
+    private static final int EMPTY_CELL_NUM = 0;
 
 
     private List<ISearchAndChangeStrategy> searchAndChangeStrategies = new ArrayList<>();
@@ -58,18 +60,17 @@ public class Grid {
     }
 
     private void placeMines() {
-        int randX = 0;
-        int randY = 0;
+        int randX;
+        int randY;
         int minesPlaced = 0;
-        do { // not place mine on another mine
+        do { // not place mine on top of another mine
             randX = (int) (Math.random() * this.xLen);
             randY = (int) (Math.random() * this.yLen);
-            if (this.backGrid[randX][randY] == 0) {
-                this.backGrid[randX][randY] = -1;
+            if (this.backGrid[randX][randY] == EMPTY_CELL_NUM) {
+                this.backGrid[randX][randY] = MINE_NUM;
                 minesPlaced++;
             }
         } while (minesPlaced != getMineCount());
-
     }
 
     private void insertDangerIndexes() {
@@ -79,7 +80,7 @@ public class Grid {
         for (int x = 0; x < this.backGrid.length; x++) {
             for (int y = 0; y < this.backGrid[x].length; y++) {
 
-                if (this.backGrid[x][y] != -1) { // Do i stand on the mine ?
+                if (this.backGrid[x][y] != MINE_NUM) { // Do i stand on the mine ?
 
                     for (ISearchAndChangeStrategy strategy : searchAndChangeStrategies) {
                         if (strategy.searchAndChange(x, y)) {
@@ -141,14 +142,13 @@ public class Grid {
 
         switch (this.backGrid[x][y]) {
 
-            case -1:
+            case MINE_NUM:
                 System.out.println("Game over");
                 this.frontGrid[x][y] = mineUnit;
                 gameOver();
                 break;
 
-            case 0:
-                this.frontGrid[x][y] = reveledUnit;
+            case EMPTY_CELL_NUM:
                 cascadeReveal(new Coordinates(pointer.getPosX(), pointer.getPosY()) );
                 revealNumbers();
                 break;
@@ -186,8 +186,8 @@ public class Grid {
     private void cascadeReveal(Coordinates initCord) {
 
 
-        LinkedList<Coordinates> moreReveal = new LinkedList<Coordinates>();
-        Coordinates temp;
+        LinkedList<Coordinates> moreReveal = new LinkedList<>();
+
 
         for (ISearchAndChangeStrategy strategy : searchAndChangeStrategies) {
             moreReveal.add( strategy.floodFillSearchAndChange(initCord.getPosX(),initCord.getPosY(), reveledUnit)) ;
@@ -197,7 +197,6 @@ public class Grid {
         if(moreReveal.get(k) != null)
             cascadeReveal(moreReveal.get(k));
         }
-
 
     }
 
